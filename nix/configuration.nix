@@ -109,6 +109,7 @@
    rofi-wayland
    wl-clipboard
    stow
+   oh-my-posh
   ];
 
   fonts.packages = with pkgs; [
