@@ -1,0 +1,74 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "sway/workspaces",
+    "sway/window",
+    "sway/mode"
+  ],
+  "modules-center": ["custom/scratchpad-indicator", "tray"],
+  "modules-right": [
+    "wireplumber",
+    "network",
+    "battery",
+    "clock"
+  ],
+  "height": 30,
+  "sway/window": {
+    "format": "{shell} {title}",
+    "max-length": 50,
+    "rewrite": {
+     "xdg_shell (.*)": "$1",
+     "xwayland (.*)": "[𝕏] $1"
+    }
+  },
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}"
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 10
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " {essid}",
+    "format-ethernet": " {ifname} ",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "eth {ifname}",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol"
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "good": 80,
+      "warning": 50,
+      "critical": 35
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", ""],
+    "max-length": 25
+  }
+}

@@ -111,12 +111,17 @@
    stow
    oh-my-posh
    waybar
+   jq
+   ripgrep
+   pavucontrol
+   discord
   ];
 
   fonts.packages = with pkgs; [
     (nerdfonts.override {
       fonts = [ "JetBrainsMono" ];
     })
+    material-icons
   ];
 
   programs.neovim = {
