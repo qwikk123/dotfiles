@@ -170,4 +170,10 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
+
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 14d";
+  };
+
 }
