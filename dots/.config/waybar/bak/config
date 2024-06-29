@@ -1,0 +1,133 @@
+[{
+    "layer": "top",
+    "output": "Virtual-1",
+    "position": "top",
+    "height": 40,
+    "spacing": 15, // Gaps between modules in pixels
+    "modules-left": ["hyprland/workspaces", "sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [
+      "custom/recording_status",
+      "cpu",
+      "memory",
+      "pulseaudio",
+      "network",
+      "tray"
+    ],
+    // Modules configuration
+    "include": [
+      "~/.config/waybar/clock.json",
+      "~/.config/waybar/workspaces.json"
+    ],
+    "idle_inhibitor": {
+        "format": "{icon} {status}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "custom/recording_status": {
+        "exec": "",
+        "format": "{icon} {status}",
+        "format-icons": {
+            "recording": "",
+            "disabled": ""
+        },
+        "tooltip": true,
+        "tooltip-format": "OBS recording status"
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "🌡", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "interface": "wlan0",
+        "format-wifi": " {signalStrength}%",
+        "format-ethernet": " {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip": true,
+        "tooltip-format": "{essid}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon}  {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon}  {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+    "custom/media": {
+        "format": " {}",
+        "max-length": 40,
+        "exec": "$HOME/dotfiles/scripts/scroll_spotify_status.sh",
+        "escape": true
+    }
+},
+{
+    "layer": "top",
+    "output": "HDMI-A-1",
+    "position": "top",
+    "height": 40,
+    "spacing": 15, // Gaps between modules in pixels
+    "modules-left": ["hyprland/workspaces", "sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": [ "custom/media", "disk", "disk#2" ],
+    // Module configuration
+    "include": ["~/.config/waybar/clock.json", "~/.config/waybar/workspaces.json"],
+    "disk": {
+      "interval": 1,
+      "path": "/",
+      "format": "{path}: {used} / {total}"
+    },
+    "disk#2": {
+      "interval": 1,
+      "path": "/mnt/media2",
+      "format": "{path}: {used} / {total}"
+    },
+    "custom/media": {
+        "format": " {}",
+        "max-length": 40,
+        "exec": "$HOME/dotfiles/scripts/scroll_spotify_status.sh",
+        "escape": true
+    }
+}]

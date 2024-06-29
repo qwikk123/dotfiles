@@ -1,0 +1,5 @@
+configuration {
+  font: "JetBrains Mono Nerd Font 15";
+}
+
+@theme "./colors-rofi-dark.rasi"

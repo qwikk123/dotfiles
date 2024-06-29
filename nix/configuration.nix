@@ -110,6 +110,7 @@
    wl-clipboard
    stow
    oh-my-posh
+   waybar
   ];
 
   fonts.packages = with pkgs; [
