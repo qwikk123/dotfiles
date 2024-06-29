@@ -131,6 +131,11 @@
       "type": "prompt"
     }
   ],
+  "transient_prompt": {
+     "background": "transparent",
+     "foreground": "#ebdbb2",
+     "template": "{{ .PWD }} > "
+  },
   "console_title_template": "{{ .Folder }}",
   "final_space": true,
   "version": 2
