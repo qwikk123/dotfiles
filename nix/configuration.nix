@@ -56,7 +56,7 @@
   };
 
   # Configure console keymap
-  console.keyMap = "dvorak";
+  console.keyMap = "qwerty";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -115,6 +115,8 @@
    ripgrep
    pavucontrol
    discord
+   tofi
+   kdePackages.sddm-kcm
   ];
 
   fonts.packages = with pkgs; [
