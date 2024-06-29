@@ -111,6 +111,12 @@
    stow
   ];
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {
+      fonts = [ "JetBrainsMono" ];
+    })
+  ];
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;

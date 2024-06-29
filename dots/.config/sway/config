@@ -23,7 +23,7 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
-output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/qwikk/Pictures/wp5847395-minimal-sky-material-wallpapers.jpg fill
 
 output Virtual-1 resolution 1920x1080 position 1920,0
  
@@ -58,6 +58,11 @@ output Virtual-1 resolution 1920x1080 position 1920,0
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
+
+input type:keyboard {
+  xkb_options compose:ralt
+}
+
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -219,6 +224,5 @@ bar {
 }
 
 include /etc/sway/config.d/*
-
 
 bindsym Mod1+space exec rofi -show drun
