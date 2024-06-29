@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+  environment.sessionVariables.FLAKE = "/home/qwikk/dotfiles/nix";
+
   nix.extraOptions = "experimental-features = nix-command flakes repl-flake";
   
   # Bootloader.
@@ -12,7 +14,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "qwikk"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -35,6 +37,17 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+
+  #SWAY
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+    extraOptions = [
+      "--verbose"
+      "--debug"
+      "--unsupported-gpu"
+    ];
+  };
 
   # Configure keymap in X11
   services.xserver = {
@@ -93,6 +106,9 @@
    lf
    zoxide
    gitFull
+   rofi-wayland
+   wl-clipboard
+   stow
   ];
 
   programs.neovim = {
