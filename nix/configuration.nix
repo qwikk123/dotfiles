@@ -115,7 +115,6 @@
    ripgrep
    pavucontrol
    discord
-   kdePackages.sddm-kcm
   ];
 
   fonts.packages = with pkgs; [
