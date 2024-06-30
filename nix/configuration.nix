@@ -117,7 +117,6 @@
    discord
    tofi
    kdePackages.sddm-kcm
-   warp-terminal
   ];
 
   fonts.packages = with pkgs; [
