@@ -127,6 +127,9 @@
     shell = pkgs.zsh;
   };
 
+  # Eable flatpak
+  services.flatpak.enable = true;
+
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -149,8 +152,8 @@
    jq
    ripgrep
    pavucontrol
-   discord
    warp-terminal
+   vesktop
   ];
 
   fonts.packages = with pkgs; [
@@ -172,6 +175,8 @@
   };
   programs.nh.enable = true;
 
+  # STEAM
+  programs.steam.enable = true;
 
   #VMWARE STUFF
 #  services.xserver.videoDrivers = [ "vmware" ];
