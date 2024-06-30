@@ -150,6 +150,7 @@
    ripgrep
    pavucontrol
    discord
+   warp-terminal
   ];
 
   fonts.packages = with pkgs; [
