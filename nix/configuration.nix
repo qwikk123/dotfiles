@@ -115,7 +115,6 @@
    ripgrep
    pavucontrol
    discord
-   tofi
    kdePackages.sddm-kcm
   ];
 
