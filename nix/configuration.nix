@@ -56,7 +56,7 @@
   };
 
   # Configure console keymap
-  console.keyMap = "qwerty";
+  console.keyMap = "us";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -117,6 +117,7 @@
    discord
    tofi
    kdePackages.sddm-kcm
+   warp-terminal
   ];
 
   fonts.packages = with pkgs; [
