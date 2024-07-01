@@ -81,6 +81,7 @@
     extraOptions = [
       "--verbose"
       "--debug"
+      "--unsupported-gpu"
     ];
   };
 
@@ -154,6 +155,8 @@
    pavucontrol
    warp-terminal
    vesktop
+   discord
+   onboard
   ];
 
   fonts.packages = with pkgs; [

@@ -25,9 +25,6 @@ set $menu dmenu_path | wmenu | xargs swaymsg exec --
 # Default wallpaper (more resolutions are available in /run/current-system/sw/share/backgrounds/sway/)
 output * bg /home/qwikk/Pictures/wp5847395-minimal-sky-material-wallpapers.jpg fill
 
-output Virtual-1 resolution 1920x1080 position 1920,0
- 
-
 #
 # Example configuration:
 #
