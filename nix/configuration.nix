@@ -158,7 +158,6 @@
    discord
    onboard
    wowup-cf
-   #(callPackage ./overrides/lazyvim.nix {})
   ];
 
   fonts.packages = with pkgs; [
