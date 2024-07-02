@@ -43,7 +43,7 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.production;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
   
   # Bootloader 
@@ -157,6 +157,8 @@
    vesktop
    discord
    onboard
+   wowup-cf
+   #(callPackage ./overrides/lazyvim.nix {})
   ];
 
   fonts.packages = with pkgs; [
@@ -169,7 +171,9 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    package = pkgs.callPackage ./overrides/lazyvim.nix {};
   };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -180,10 +184,6 @@
 
   # STEAM
   programs.steam.enable = true;
-
-  #VMWARE STUFF
-#  services.xserver.videoDrivers = [ "vmware" ];
-#  virtualisation.vmware.guest.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
