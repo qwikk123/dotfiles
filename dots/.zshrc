@@ -15,5 +15,14 @@ lfcd () {
   z "$(command lf -print-last-dir "$@")"
 }
 
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		z -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config ~/dotfiles/omp_themes/gruvbox.omp.json)"

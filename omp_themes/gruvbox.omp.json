@@ -132,7 +132,7 @@
     }
   ],
   "transient_prompt": {
-     "template": "{{ .PWD }} > "
+     "template": "{{ .PWD }} -> "
   },
   "console_title_template": "{{ .Folder }}",
   "final_space": true,
