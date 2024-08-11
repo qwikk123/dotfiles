@@ -121,3 +121,4 @@ function yy() {
 
 eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config ~/dotfiles/omp_themes/gruvbox.omp.json)"
+alias lg='lazygit'
