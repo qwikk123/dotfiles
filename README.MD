@@ -1,4 +1,6 @@
 ### dots :) ###
 
 stow command (inside .config):
-```stow . -t ~```
+```
+stow . -t ~
+```
