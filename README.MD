@@ -1,6 +1,6 @@
 ### dots :) ###
 
-stow command (inside .config):
+stow command (inside dots/):
 ```
 stow . -t ~
 ```
